@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+</head>
+<body>
+    <!--<a href="{%url 'session_test:login'%}">登录</a>-->
+    <!--<form method="post" action="/login/login_handle/">-->
+    <form method="post" action="{%url 'session_test:login_handle' %}">
+        {% csrf_token %}
+        <input type="text" name="uname"/>
+        <input type="submit" value="登录"/>
+    </form>
+</body>
+</html>
